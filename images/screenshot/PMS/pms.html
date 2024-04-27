@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="zakir7dipu">
+
+    <title>BIZZ PMS Documentation</title>
+
+    <link href="css/collection.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet"
+    type="text/css">
+    <link rel="apple-touch-icon" href="./images/bizz-favicon.ico">
+    <link rel="icon" href="./images/bizz-favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+    <aside class="sidebar sidebar-boxed sidebar-dark">
+        <a class="sidebar-brand" href="./index.html"><img src="images/bizz-logo.png" alt="logo"></a>
+        <ul class="nav sidenav dropable">
+            <li><a href="#getting_started" title="Dashboard">Dashboard</a></li>
+            <li><a href="#requisition_list" title="Requisition >> Requisition List">Requisition >> Requisition List</a></li>
+            <li><a href="#user_requisition_list" title="Requisition >> User's Requisition List">Requisition >> User's Requisition List</a></li>
+            <li><a href="#halt_requisition_list" title="Requisition >> User's Requisition List">Requisition >> Halt Requisition List</a></li>
+            <li><a href="#requisition_notification_list" title="Requisition >> Requisition Notification List">Requisition >> Requisition Notification List</a></li>
+            <li><a href="#delivered_requisition_list" title="Requisition >> Delivered & Acknowledged Requisition">Requisition >> Delivered & Acknowledged Requisition</a></li>
+            <li><a href="#store_requisition" title="Store Manage >> Requisitions">Store Manage >> Requisitions</a></li>
+            <li><a href="#store_rfp_requisition" title="Store Manage >> RFP Requisition List">Store Manage >> RFP Requisition List</a></li>
+            <li><a href="#pending_delivery_requisition" title="Store Manage >> Pending delivery">Store Manage >> Pending delivery</a></li>
+            <li><a href="#complete_delivery_list" title="Store Manage >>  Delivery list for Requisition">Store Manage >>  Delivery list for Requisition</a></li>
+            <li><a href="#deliverd_order_list" title="Store Manage >>  Delivery Orders list">Store Manage >>  Delivery Orders list</a></li>
+            <li><a href="#rfp_requisition_list" title="RFP >>  RFP Requisition List">RFP >>  RFP Requisition List</a></li>
+            <li><a href="#proposal_create" title="RFP >>  Proposal Create">RFP >>  Proposal Create</a></li>
+            <li><a href="#rfp_lists" title="RFP >>  RFP List">RFP >>  RFP List</a></li>
+            <li><a href="#estimate" title="Estimate List">Estimate List</a></li>
+            <li><a href="#inventory_summary" title="Inventory >> Summary">Inventory >> Summary</a></li>
+            <li><a href="#inventory_log" title="Inventory >> Log">Inventory >> Log</a></li>
+            <li><a href="#inventory_stock_report" title="Inventory >> Stock Report">Inventory >> Stock Report</a></li>
+            <li><a href="#product_category" title="Product >> Category">Product >> Category</a></li>
+            <li><a href="#product_sub_category" title="Product >> Sub Category">Product >> Sub Category</a></li>
+            <li><a href="#product_unit_list" title="Product >> Unit List">Product >> Unit List</a></li>
+            <li><a href="#product_list" title="Product >> List">Product >> List</a></li>
+            <li><a href="#product_attributes" title="Product >> Attributes">Product >> Attributes</a></li>
+            <li><a href="#quotation_list" title="Quotations >> List">Quotations >> List</a></li>
+            <li><a href="#quotation_cs" title="Quotations >> CS">Quotations >> CS</a></li>
+            <li><a href="#quotation_request_list" title="Quotations >> Requests List">Quotations >> Requests List</a></li>
+            <li><a href="#quotation_Approved_List" title="Quotations >> Approved List">Quotations >> Approved List</a></li>
+            <li><a href="#quotation_reject_List" title="Quotations >> Reject List">Quotations >> Reject List</a></li>
+            <li><a href="#quotation_estimate_List" title="Quotations >> Estimate List">Quotations >> Estimate List</a></li>
+            <li><a href="#quotation_estimate_reject_List" title="Quotations >> Estimate Reject List">Quotations >> Estimate Reject List</a></li>
+            <li><a href="#po_list" title="Purchase Order >> List">Purchase Order >> List</a></li>
+            <li><a href="#po_cancelled_list" title="Purchase Order >> Cancelled List">Purchase Order >> Cancelled List</a></li>
+            <li><a href="#supplier_list" title="Suppliers >> List">Suppliers >> List</a></li>
+            <li><a href="#gate_in_po_list" title="Gate In >> PO List">Gate In >> PO List</a></li>
+            <li><a href="#gate_in_list" title="Gate In >> List">Gate In >> List</a></li>
+            <li><a href="#po_wise_gate_in_list" title="Gate In >> PO Wise Gate In List">Gate In >> PO Wise Gate In List</a></li>
+            <li><a href="#gate_out_list" title="Gate Out >> List">Gate Out >> List</a></li>
+            <li><a href="#qe_approved_list" title="Quality Ensure >> Approval List">Quality Ensure >> Approval List</a></li>
+            <li><a href="#qe_return_replace_list" title="Quality Ensure >> Return Replace List">Quality Ensure >> Return Replace List</a></li>
+            <li><a href="#grn_list" title="GRN >> List">GRN >> List</a></li>
+            <li><a href="#bill_manage_po_list" title="Bill Manage >> PO List">Bill Manage >> PO List</a></li>
+            <li><a href="#bill_manage_billing_attachment_list" title="Bill Manage >> Billing Attachment List">Bill Manage >> Billing Attachment List</a></li>
+            <li><a href="#po_cash_approval" title="Purchase Order Cash Approval">Purchase Order Cash Approval</a></li>
+            <li><a href="#Warehouse_Location" title="Settings >> Location">Settings >> Location</a></li>
+            <li><a href="#Approval_Range_Setup_List" title="Settings >> Approval Range Setup List">Settings >> Approval Range Setup List</a></li>
+            <li><a href="#Payment_Terms_List_List" title="Settings >> Payment Terms List List">Settings >> Payment Terms List List</a></li>
+            <li><a href="#FAQ" title="Settings >> FAQ">Settings >> FAQ</a></li>
+            <li><a href="#users" title="User >> Users">User >> Users</a></li>
+            <li><a href="#roles" title="ACL >> Roles">ACL >> Roles</a></li>
+            <li><a href="#permission" title="ACL >> Permission">ACL >> Permission</a></li>
+            <li><a href="#PMS_menu" title="ACL >> PMS Menus">ACL >> PMS Menus</a></li>
+            <li><a href="#PMD_menu" title="ACL >> PMD Menus">ACL >> PMD Menus</a></li>
+            <li><a href="#accounts_billing_list" title="Accounts >> Billing List">Accounts >> Billing List</a></li>
+            <li><a href="#accounts_supplier_payment" title="Accounts >> Supplier Payments">Accounts >> Supplier Payments</a></li>
+            <li><a href="#accounts_supplier_ledger" title="Accounts >> Supplier Ledger">Accounts >> Supplier Ledger</a></li>
+            <li><a href="#project" title="Project Management">Project Management </a></li>
+            <li><a href="#pmo" title="Project Management Office (PMO)">Project Management Office (PMO)</a></li>
+        </ul>
+    </aside>
+    <header class="site-header navbar-transparent">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="true" aria-controls="navbar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                </button>
+
+                <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="banner auto-size" style="background-color: #2480de">
+        <div class="container-fluid text-white">
+            <h1><strong>BIZZ PMS </strong>- A Purchase Management System</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+        <input type="text" name="search" id="search" list="searchList" placeholder="search" class="form-control rounded"/>
+        <datalist id="searchList">
+            <option>Dashboard</option>
+            <option>Requisition >> Requisition List</option>
+            <option>Requisition >> User's Requisition List</option>
+            <option>Requisition >> Halt Requisition List</option>
+            <option>Requisition >> Requisition Notification List</option>
+            <option>Requisition >> Delivered & Acknowledged Requisition</option>
+            <option>Store Manage >> Requisitions</option>
+            <option>Store Manage >> RFP Requisition List</option>
+            <option>Store Manage >> Pending delivery</option>
+            <option>Store Manage >>  Delivery list for Requisition</option>
+            <option>Store Manage >>  Delivery Orders list</option>
+            <option>RFP >>  RFP Requisition List</option>
+            <option>RFP >>  Proposal Create</option>
+            <option>RFP >>  RFP List</option>
+            <option>Estimate List</option>
+            <option>Inventory >> Summary</option>
+            <option>Inventory >> Log</option>
+            <option>Inventory >> Stock Report</option>
+            <option>Product >> Category</option>
+            <option>Product >> Sub Category</option>
+            <option>Product >> Unit List</option>
+            <option>Product >> List</option>
+            <option>Product >> Attributes</option>
+            <option>Quotations >> List</option>
+            <option>Quotations >> CS</option>
+            <option>Quotations >> Requests List</option>
+            <option>Quotations >> Approved List</option>
+            <option>Quotations >> Reject List</option>
+            <option>Quotations >> Estimate List</option>
+            <option>Quotations >> Estimate Reject List</option>
+            <option>Purchase Order >> List</option>
+            <option>Purchase Order >> Cancelled List</option>
+            <option>Suppliers >> List</option>
+            <option>Gate In >> PO List</option>
+            <option>Gate In >> List</option>
+            <option>Gate In >> PO Wise Gate In List</option>
+            <option>Gate Out >> List</option>
+            <option>Quality Ensure >> Approval List</option>
+            <option>Quality Ensure >> Return Replace List</option>
+            <option>GRN >> List</option>
+            <option>Bill Manage >> PO List</option>
+            <option>Bill Manage >> Billing Attachment List</option>
+            <option>Purchase Order Cash Approval</option>
+            <option>Settings >> Location</option>
+            <option value="Approval_Range_Setup_List">Settings >> Approval Range Setup List</option>
+            <option>Settings >> Payment Terms List List</option>
+            <option>Settings >> FAQ</option>
+            <option>User >> Users</option>
+            <option>ACL >> Roles</option>
+            <option>ACL >> Permission</option>
+            <option>ACL >> PMS Menus</option>
+            <option>ACL >> PMD Menus</option>
+            <option>Accounts >> Billing List</option>
+            <option>Accounts >> Supplier Payments</option>
+            <option>Accounts >> Supplier Ledger</option>
+            <option>Project Management </option>
+            <option>Project Management Office (PMO)</option>
+        </datalist>
+    </div>
+
+</header>
+
+<main class="container-fluid">
+    <article class="main-content" role="main">
+        <section id="getting_started">
+            <h4>BIZZ PMS - A Purchase Management System</h4>
+            <hr>
+            <div class="page-header">
+                <h3>Getting started with admin dashboard</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/dashboard.png" alt=""></p>
+            <p>What you get into dashboard area:</p>
+            <ol>
+                <li>Requisition</li>
+                <li>Store Manage</li>
+                <li>Requisition Management</li>
+                <li>Estimate</li>
+                <li>Inventory</li>
+                <li>Product Management</li>
+                <li>Quotation Management</li>
+                <li>Purchase</li>
+                <li>Supplier</li>
+                <li>Gate In</li>
+                <li>Quality-Ensure</li>
+                <li>Goods Received Note (GRN)</li>
+                <li>Bill Manage</li>
+                <li>Settings</li>
+                <li>User Management</li>
+                <li>Access Control List (ACL)</li>
+                <li>PO Cash Approval</li>
+                <li>Accounting Panel Access</li>
+                <li>Project Panel Access</li>
+                <li>Project Management Office (PMO)</li>
+            </ol>
+            <p>Note: You can analysis Requisition, Inventory, Purchase, GRN, Bill etc. status from this dashboard. And this dashboard will change it\'s outlook and charts depend on users permission.</p>
+        </section>
+
+        <section id="requisition_list">
+            <div class="page-header">
+                <h3>Requisition >> Requisition List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/requisition_list.png" alt=""></p>
+            <p>Note: You can get all your requisitions list from here.</p>
+        </section>
+
+        <section id="user_requisition_list">
+            <div class="page-header">
+                <h3>Requisition >> User's Requisition List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/user_requisitions.png" alt=""></p>
+            <p>Note: You can get all your employees requisitions list from here, if you are department head.</p>
+        </section>
+
+        <section id="halt_requisition_list">
+            <div class="page-header">
+                <h3>Requisition >> Halt Requisition List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/halt_requistion_list.png" alt=""></p>
+            <p>Note: You can get all your employees halt requisitions list from here, if you are department head.</p>
+        </section>
+
+        <section id="requisition_notification_list">
+            <div class="page-header">
+                <h3>Requisition >> Requisition Notification List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/notification_list.png" alt=""></p>
+            <p>Note: You can get all your requisition's notification list.</p>
+        </section>
+
+        <section id="delivered_requisition_list">
+            <div class="page-header">
+                <h3>Requisition >> Delivered & Acknowledged Requisition</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/delivered_requisitions.png" alt=""></p>
+            <p>Note: You can get all your Delivered requisition's here & if you need, you can acknowledge.</p>
+        </section>
+
+        <section id="store_requisition">
+            <div class="page-header">
+                <h3>Store Manage >> Requisitions</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/store_requisitions.png" alt=""></p>
+        </section>
+
+        <section id="store_rfp_requisition">
+            <div class="page-header">
+                <h3>Store Manage >> RFP Requisition List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/rfp_list.png" alt=""></p>
+        </section>
+
+        <section id="pending_delivery_requisition">
+            <div class="page-header">
+                <h3>Store Manage >> Pending delivery</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/panding_delivery.png" alt=""></p>
+            <div class="page-header">
+                <h3>Store Manage >>  Confirm delivery Form</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/confirm_delivery_form.png" alt=""></p>
+        </section>
+    </section>
+
+    <section id="complete_delivery_list">
+        <div class="page-header">
+            <h3>Store Manage >>  Delivery list for Requisition</h3>
+        </div>
+        <p><img src="images/screenshot/PMS/complete_delivery_list.png" alt=""></p>
+        <section id="deliverd_order_list">
+            <div class="page-header">
+                <h3>Store Manage >>  Delivery Orders list</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/deliverd_order_list.png" alt=""></p>
+
+            <p>Note: This screen you can get only sub-store panel.</p>
+        </section>
+
+        <section id="rfp_requisition_list">
+            <div class="page-header">
+                <h3>Requisition Management >>  Requisition List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/rfp_requisition.png" alt=""></p>
+
+        </section>
+
+        <section id="proposal_create">
+            <div class="page-header">
+                <h3>Requisition Management >>  Proposal Create</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/proposal_create.png" alt=""></p>
+        </section>
+
+        <section id="rfp_lists">
+            <div class="page-header">
+                <h3>Requisition Management >>  Request Proposal List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/rfp_lists.png" alt=""></p>
+
+        </section>
+        <section id="estimate">
+            <div class="page-header">
+                <h3>Estimate List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/estimate_primary_list.png" alt=""></p>
+
+        </section>
+
+        <section id="inventory_summary">
+            <div class="page-header">
+                <h3>Inventory >> Summary</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/inventory_summary.png" alt=""></p>
+
+            <p>Note: All Inventory Summary is here, you can filter this list.</p>
+        </section>
+
+        <section id="inventory_log">
+            <div class="page-header">
+                <h3>Inventory >> Log</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/inventory_log.png" alt=""></p>
+
+            <p>Note: Inventory in & out log.</p>
+        </section>
+
+        <section id="inventory_stock_report">
+            <div class="page-header">
+                <h3>Inventory >> Stock Report</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/invantory_sloct_report.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/inventory_stock_report.png" alt=""></p>
+        </section>
+        <section id="product_category">
+            <div class="page-header">
+                <h3>Product >> Category</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/category_list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/add_new_category.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/edit_category.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/delete_category.png" alt=""></p>
+        </section>
+
+        <section id="product_sub_category">
+            <div class="page-header">
+                <h3>Product >> Sub Category</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/sub-category-list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/sub-category-attribute.png" alt=""></p>
+        </section>
+
+        <section id="product_unit_list">
+            <div class="page-header">
+                <h3>Product >> Unit List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/product_unit_list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/add_new_unit.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/edit_unit.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/delete_unit.png" alt=""></p>
+
+            <p>Note: Unite at matrix.</p>
+        </section>
+
+        <section id="product_list">
+            <div class="page-header">
+                <h3>Product >> List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/product_list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/add_new_product.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/edit_product.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/delete_product.png" alt=""></p>
+
+            <p>Note: Product list, add, edit & delete.</p>
+        </section>
+
+        <section id="product_attributes">
+            <div class="page-header">
+                <h3>Product >> Attributes</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/product_attributes.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/add_new.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/edit_attribute.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/Attributes_option.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/Attribute_option_add.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/edit_Attribute_option.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/delete_Attribute_option.png" alt=""></p>
+
+        </section>
+
+        <section id="quotation_list">
+            <div class="page-header">
+                <h3>Quotations >> List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/quotation_list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/rfp_details.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/quotation_details.png" alt=""></p>
+        </section>
+
+        <section id="quotation_cs">
+            <div class="page-header">
+                <h3>Quotations >> CS</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/quotation_cs.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/request_proposal_details.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/quotation_cs_Analysis.png" alt=""></p>
+        </section>
+
+        <section id="quotation_request_list">
+            <div class="page-header">
+                <h3>Quotations >> Requests List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/quotations_requests_list.png" alt=""></p>
+        </section>
+
+        <section id="quotation_Approved_List">
+            <div class="page-header">
+                <h3>Quotations >> Approved List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/quotation_Approved_List.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/q-requests-approved-form.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/q-requests-cs-view.png" alt=""></p>
+        </section>
+
+        <section id="quotation_reject_List">
+            <div class="page-header">
+                <h3>Quotations >> Reject List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/quotation_reject_List.png" alt=""></p>
+        </section>
+
+        <section id="quotation_estimate_List">
+            <div class="page-header">
+                <h3>Quotations >> Estimate List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/estimate_list.png" alt=""></p>
+        </section>
+
+        <section id="quotation_estimate_reject_List">
+            <div class="page-header">
+                <h3>Quotations >> Estimate Reject List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/estimate_reject_list.png" alt=""></p>
+        </section>
+
+        <section id="po_list">
+            <div class="page-header">
+                <h3>Purchase Order >> List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/po_list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/po_details.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/Print_po.png" alt=""></p>
+        </section>
+
+        <section id="po_cancelled_list">
+            <div class="page-header">
+                <h3>Purchase Order >> Cancelled List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/po_cancelled_list.png" alt=""></p>
+        </section>
+
+        <section id="supplier_list">
+            <div class="page-header">
+                <h3>Suppliers >> List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/supplier_list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/supplier-approval-popup.png" alt=""></p>
+        </section>
+
+        <section id="gate_in_po_list">
+            <div class="page-header">
+                <h3>Gate In >> PO List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/gate_in_po_list.png" alt=""></p>
+        </section>
+
+        <section id="gate_in_list">
+            <div class="page-header">
+                <h3>Gate In >> List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/gate_in_list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/gate-in-form.png" alt=""></p>
+        </section>
+
+        <section id="po_wise_gate_in_list">
+            <div class="page-header">
+                <h3>Gate In >> PO Wise Gate In List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/po_wise_gate_in_list.png" alt=""></p>
+        </section>
+        <section id="gate_out_list">
+            <div class="page-header">
+                <h3>Gate Out >> List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/gate_out_list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/gate_out_slip.png" alt=""></p>
+        </section>
+
+        <section id="qe_approved_list">
+            <div class="page-header">
+                <h3>Quality Ensure >> Approval List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/qe_approved_list.png" alt=""></p>
+        </section>
+
+        <section id="qe_return_replace_list">
+            <div class="page-header">
+                <h3>Quality Ensure >> Return Replace List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/qe_return_replace_list.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/replace_list.png" alt=""></p>
+        </section>
+
+        <section id="grn_list">
+            <div class="page-header">
+                <h3>GRN >> List</h3>
+            </div>
+            <p>Note: GRN Waitting List.</p>
+            <p><img src="images/screenshot/PMS/grn_waiting_list.png" alt=""></p>
+            <p>Note: GRN Stock In Form.</p>
+            <p><img src="images/screenshot/PMS/grn-stock-in-form.png" alt=""></p>
+            <p>Note: GRN List.</p>
+            <p><img src="images/screenshot/PMS/grn_list.png" alt=""></p>
+        </section>
+
+        <section id="bill_manage_po_list">
+            <div class="page-header">
+                <h3>Bill Manage >> PO List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/bill_manage_po_list.png" alt=""></p>
+            <p>Note: Purchase Order wise bill upload.</p>
+            <p><img src="images/screenshot/PMS/po-wise-bill-upload.png" alt=""></p>
+            <p>Note: Individual challan wise bill upload.</p>
+            <p><img src="images/screenshot/PMS/challan-wise-bill-upload.png" alt=""></p>
+        </section>
+
+        <section id="bill_manage_billing_attachment_list">
+            <div class="page-header">
+                <h3>Bill Manage >> Billing Attachment List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/bill_manage_billing_attachment_list.png" alt=""></p>
+        </section>
+
+        <section id="po_cash_approval">
+            <div class="page-header">
+                <h3>Po Cash Approval</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/Accounts-PO-cash-approval-list.png" alt=""></p>
+        </section>
+
+
+        <section id="Warehouse_Location">
+            <div class="page-header">
+                <h3>Settings >> Location</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/Warehouse_Location.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/add_new_location.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/edit_location.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/delete_location.png" alt=""></p>
+        </section>
+
+        <section id="Approval_Range_Setup_List">
+            <div class="page-header">
+                <h3>Settings >> Approval Range Setup List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/Approval Range Setup List.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/add_approval.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/edit_approval.png" alt=""></p>
+        </section>
+
+        <section id="Payment_Terms_List_List">
+            <div class="page-header">
+                <h3>Settings >> Payment Terms List List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/Payment_Terms_List_List.png" alt=""></p>
+        </section>
+
+        <section id="FAQ">
+            <div class="page-header">
+                <h3>Settings >> FAQ</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/FAQ.png" alt=""></p>
+
+            <p>Note: You can add, edit and delete FAQ from this screen.</p>
+        </section>
+
+        <section id="users">
+            <div class="page-header">
+                <h3>User >> Users</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/users.png" alt=""></p>
+            <p><img src="images/screenshot/PMS/user_add.png" alt=""></p>
+            <p>Note: You can add, edit, view and delete Users from this screen.</p>
+            <p><img src="images/screenshot/PMS/deleted_user.png" alt=""></p>
+            <p>Note: You can restore delete users from this screen.</p>
+        </section>
+
+
+        <section id="roles">
+            <div class="page-header">
+                <h3>ACL >> Roles</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/roles.png" alt=""></p>
+        </section>
+
+        <section id="permission">
+            <div class="page-header">
+                <h3>ACL >> Permission</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/permission.png" alt=""></p>
+        </section>
+
+        <section id="PMS_menu">
+            <div class="page-header">
+                <h3>ACL >> PMS Menus</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/PMS_menue.png" alt=""></p>
+        </section>
+        <section id="PMD_menu">
+            <div class="page-header">
+                <h3>ACL >> PMD Menus</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/PMD_menu.png" alt=""></p>
+        </section>
+        <section id="access_accounting_and_pmd">
+            <div class="page-header">
+                <h3>Access Another Module</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/access_accounting_and_pmd.png" alt=""></p>
+
+            <p>Note: If you have permission to access another module like "Accounting Module", "PMD Module" you will get a tab in PMS panel.</p>
+        </section>
+        
+        <section id="accounts_billing_list">
+            <div class="page-header">
+                <h3>Accounts >> Billing List</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/account-bill-list.png" alt=""></p>
+            <p>Note: Purchase Order wise individual billing list</p>
+            <p><img src="images/screenshot/PMS/po_wise_individual_billing_list.png" alt=""></p>
+        </section>
+
+        <section id="accounts_supplier_payment">
+            <div class="page-header">
+                <h3>Accounts >> Supplier Payments</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/supplier-payments.png" alt=""></p>
+        </section>
+
+        <section id="accounts_supplier_ledger">
+            <div class="page-header">
+                <h3>Accounts >> Supplier Ledger</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/supplier-ledger.png" alt=""></p>
+        </section>
+
+        <section id="project">
+            <div class="page-header">
+                <h3>Project Management</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/pmd_dashboard.png" alt=""></p>
+            <p>Note: Form here admin can go Project Management dashboard in PMD Module.</p>
+        </section>
+
+
+        <section id="pmo">
+            <div class="page-header">
+                <h3>Project Management Office (PMO)</h3>
+            </div>
+            <p><img src="images/screenshot/PMS/pmo.png" alt=""></p>
+
+            <p>Note: Form here admin can change Project Manager for PMD Module.</p>
+        </section>
+    </article>
+    
+</main>
+
+<footer class="site-footer">
+    <div class="container-fluid">
+        <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>© 2018, All Rights Reserved, Design &amp; Developed By:
+                    <a href="https://themeforest.net/user/tributetheme/portfolio"> TributeTheme</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/other.js"></script>
+<script src="js/custom.js"></script>
+<script>
+    (function ($){
+        "use script";
+        const searchBox = document.querySelector("#search");
+        let section = document.querySelectorAll("section");
+        searchBox.onchange = (e) => {
+            Array.from(section).map((item, index) => {
+                let sectionId = item.id;
+                let sectionTitle = item.querySelector('h3').innerHTML;
+                sectionTitle = sectionTitle.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
+                if (sectionTitle === e.target.value){
+                    console.log(sectionId)
+                    window.location.hash = `#${sectionId}`;
+                }
+            })
+        }
+    })(jQuery);
+</script>
+
+</body>
+</html>
