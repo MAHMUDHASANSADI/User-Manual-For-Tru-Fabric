@@ -94,10 +94,16 @@ img {
 }
 
 @media max-width991px {
+	body {
+		overflow: hidden;
+	}
+
 	.prism-languages li {
 		width: 50%;
+
 	}
 }
+
 
 .d-none {
 	display: none;
